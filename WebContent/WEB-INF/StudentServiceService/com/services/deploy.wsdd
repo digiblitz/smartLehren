@@ -1,0 +1,46 @@
+<!--
+  Copyright: 2018 digiBlitz Foundation
+  
+  License: digiBlitz Public License 1.0 (DPL) 
+  Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+  
+  Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+  
+  Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+  
+  "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+-->
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StudentServiceService WSDL service -->
+
+  <service name="StudentService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.com"/>
+      <parameter name="wsdlServiceElement" value="StudentServiceService"/>
+      <parameter name="schemaQualified" value="http://services.com"/>
+      <parameter name="wsdlServicePort" value="StudentService"/>
+      <parameter name="className" value="com.services.StudentService"/>
+      <parameter name="wsdlPortType" value="StudentService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://services.com" xmlns:retNS="http://services.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="studentRegistartion" qname="operNS:studentRegistartion" returnQName="retNS:studentRegistartionReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:username" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:password" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:firstname" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:lastname" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:gender" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:e_mail" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:dob" type="tns:dateTime"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:mobileno" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:fathername" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:mothername" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:address1" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:address2" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:city" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:state" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:country" type="tns:string"/>
+        <parameter xmlns:pns="http://services.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:pincode" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="studentRegistartion"/>
+
+  </service>
+</deployment>

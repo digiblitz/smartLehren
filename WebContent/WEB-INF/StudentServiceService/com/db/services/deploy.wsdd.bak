@@ -1,0 +1,55 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StudentServiceService WSDL service -->
+
+  <service name="StudentService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.db.com"/>
+      <parameter name="wsdlServiceElement" value="StudentServiceService"/>
+      <parameter name="schemaQualified" value="http://services.db.com"/>
+      <parameter name="wsdlServicePort" value="StudentService"/>
+      <parameter name="className" value="com.db.services.StudentServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="StudentService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getInstance" qname="operNS:getInstance" xmlns:operNS="http://services.db.com" returnQName="retNS:getInstanceReturn" xmlns:retNS="http://services.db.com" returnType="rtns:StudentService" xmlns:rtns="http://services.db.com" soapAction="" >
+      </operation>
+      <operation name="studentRegistartion" qname="operNS:studentRegistartion" xmlns:operNS="http://services.db.com" returnQName="retNS:studentRegistartionReturn" xmlns:retNS="http://services.db.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:username" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:password" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:firstname" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:lastname" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:gender" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:e_mail" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:dob" xmlns:pns="http://services.db.com" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:mobileno" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:fathername" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:mothername" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:address1" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:address2" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:city" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:state" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:country" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:pincode" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:filelocation" xmlns:pns="http://services.db.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getInstance studentRegistartion"/>
+
+      <typeMapping
+        xmlns:ns="http://services.db.com"
+        qname="ns:StudentService"
+        type="java:com.db.services.StudentService_Type"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

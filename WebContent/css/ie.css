@@ -1,0 +1,54 @@
+#-------------------------------------------------------------------------------
+# Copyright: 2018 digiBlitz Foundation
+# 
+# License: digiBlitz Public License 1.0 (DPL) 
+# Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+# 
+# Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+# 
+# Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+# 
+# "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+.nav li a span {
+	behavior:url(js/PIE.htc);
+	position: relative;
+}
+
+.tab-content a {
+
+	bottom: 0;
+	padding: 5px 20px;
+
+	right: 0;
+}
+
+#form .invalid .error-message, #form .empty .empty-message {
+	display: block;
+}
+
+#form .error-message, #form .empty-message {
+	display: none;
+}
+
+.music {
+	position: relative;
+	height: 63px;
+}
+
+.music:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	line-height: 63px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	content: 'Online listening is not supported in your browser';
+	text-align: center;
+}

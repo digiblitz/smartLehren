@@ -1,0 +1,251 @@
+#-------------------------------------------------------------------------------
+# Copyright: 2018 digiBlitz Foundation
+# 
+# License: digiBlitz Public License 1.0 (DPL) 
+# Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+# 
+# Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+# 
+# Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+# 
+# "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+.menu_block  {
+	padding-top: 65px;
+	padding-bottom: 26px;
+	z-index: 999;
+	width: 240px;
+	position: relative;
+	float: left;
+	background-color: #c53333;
+}
+
+.oth {
+	float: right;
+	min-width: 220px;
+	padding-top: 107px;
+}
+
+.menu_block nav {
+	font-family: 'trebuchet MS', verdana;
+}
+
+
+nav>.sf-menu {
+	z-index: 990;
+	text-align: left;
+	position: relative;
+}
+nav{ position:relative;padding: 0px 0 0 0;}
+.sf-menu ul {position:absolute;top:-999px; display:none;/* left offset of submenus need to match (see below) */}
+.sf-menu li {float:left;position:relative; }
+.sf-menu>li {
+	float: none;
+	display: block;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.sf-menu>li+li {
+	clear: left;
+	margin-top: 1px;
+}
+
+.sf-menu>li+li+li+li {
+	margin-top: 2px;
+}
+
+.sf-menu>li>ul>li {
+  float: none;
+  position: static;
+}
+
+
+.sf-menu>li>a{
+	letter-spacing: 2px;
+	padding: 3px 40px 4px;
+	display: block;
+	text-align: left;
+	overflow: hidden;
+	position: relative;
+	color: #fff;
+}
+
+
+.sf-menu>li>a:hover,
+.sf-menu>li.current>a,
+.sf-menu>li.sfHover>a {
+	background-color: #b70000;
+}
+
+
+.sf-menu>li>a.sf-with-ul:after {
+	position: absolute;
+	content: '';
+	right: 30px;
+	width: 5px;
+	background: url(../images/arrows.png) 0 0 no-repeat;
+	height: 4px;
+	bottom: 10px;
+	pointer-events: none;
+	z-index: 999;
+	display: block;
+}
+
+
+.sf-menu>li.sfHover>a.sf-with-ul:after, 
+.sf-menu>li.current>a.sf-with-ul:after {
+
+}
+
+
+ 
+.sf-menu>li>ul>li>a.sf-with-ul:after {
+	content: '';
+	position: absolute;
+	width: 5px;
+	background: url(../images/arrows.png) 0 0 no-repeat;
+	height: 4px;
+	right: 60px;
+	bottom: 11px;
+	pointer-events: none;
+	z-index: 999;
+}
+
+
+.sf-menu>li>ul>li.sfHover>a.sf-with-ul:after {
+}
+
+.sf-menu a{
+
+}
+
+
+
+/*================================>> 2 Level <<========================================*/
+.sf-menu li ul,.sf-menu li.sfHover>ul{
+	left: 235px;
+	z-index: 999; 
+	padding-top: 19px;
+	width: 209px;
+	top: -19px;
+	padding-bottom: 30px;
+	background-color: #b70000;
+
+}
+
+
+.sf-menu li ul li{
+	position: relative;
+	text-align: left;
+
+	letter-spacing: 1px;
+	float: none !important;
+	font-size: 16px;
+	line-height: 18px;
+	text-transform: uppercase;
+
+}
+
+.sf-menu li ul li+li {
+
+}
+
+
+.sf-menu li ul li a{
+	position: relative;
+	z-index: 999;
+	display: block;
+	padding: 3px 25px 4px;
+	color:#fff;	
+
+}
+
+
+
+
+
+.sf-menu li li a:hover, 
+.sf-menu li.sfHover li.sfHover>a {  
+	background-color: #C53333;
+
+}
+
+/*================================>> 3 Level <<========================================*/
+.sf-menu li.sfHover li.sfHover ul{
+	top: -16px;
+	padding-top: 16px;
+	padding-bottom: 38px;
+	left: 209px;
+	background-color: #c53333;
+	width: 181px;
+	position: absolute;
+
+}
+
+
+.sf-menu li.sfHover li.sfHover ul li {
+
+}
+
+.sf-menu li.sfHover li.sfHover ul li a {
+	color: #fff;
+}
+
+.sf-menu li.sfHover li.sfHover ul li a:hover {
+	background-color: #b70000;
+}
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 995px) {
+
+	.sf-menu>li+li {
+
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.menu_block {
+		float: none !important;
+		padding: 20px 10px 25px !important;
+		clear: both;
+		min-height: 0px;
+  		border: none;
+  		width: auto;
+	}
+
+	
+
+  header nav{
+  	border: none !important;
+		float:none !important;
+		font:12px/15px Arial, Helvetica, sans-serif;
+		text-transform:uppercase;
+		color:#927c67;
+		margin: 0 auto;
+		
+	
+	}
+
+	
+
+  header nav ul {
+  	border: none;
+  }
+
+	.sf-menu{display:none !important; float: none;}
+
+	#mm0{
+		font:12px/15px Arial, Helvetica, sans-serif;
+		color:#202020;
+		width:100%;
+		margin: 0 auto;
+		float: none;
+    outline: none;
+		border:2px solid #fff;
+	}
+	
+
+}

@@ -1,0 +1,95 @@
+#-------------------------------------------------------------------------------
+# Copyright: 2018 digiBlitz Foundation
+# 
+# License: digiBlitz Public License 1.0 (DPL) 
+# Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+# 
+# Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+# 
+# Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+# 
+# "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+@charset "UTF-8";
+/* Base Styles */
+#cssmenu1,
+#cssmenu1 ul,
+#cssmenu1 li,
+#cssmenu1 a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+   font: 13px/18px 'Patua One', cursive;
+  font-size: 14px;
+  position: relative;
+}
+#cssmenu1 a {
+  line-height: 1.3;
+}
+#cssmenu1 {
+  width: 800px;
+  height::50px;
+  overflow:scroll;
+}
+#cssmenu1 > ul > li > a {
+ 
+  
+  color: #ffffff;
+  border-bottom: 1px solid #5e071b;
+
+}
+#cssmenu1 > ul > li > a > span {
+  background:#000000;
+  padding: 10px;
+  display: block;
+  font-size: 18px;
+  font-weight:bold;
+}
+#cssmenu1 > ul > li > a:hover {
+  text-decoration: none;
+}
+#cssmenu1 > ul > li.active {
+  border-bottom: none;
+}
+#cssmenu1 > ul > li.active > a {
+  color: #fff;
+}
+#cssmenu1 > ul > li.active > a span {
+  background:#999999;
+}
+#cssmenu1 span.cnt {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+/* Sub menu */
+#cssmenu1 ul ul {
+  display: none;
+}
+#cssmenu1 ul ul li {
+  border: 1px solid #000000;
+  border-top: 0;
+}
+#cssmenu1 ul ul a {
+  padding: 10px;
+  display: block;
+  color: #000000;
+  font-size: 13px;
+}
+#cssmenu1 ul ul a:hover {
+  color:#CCCCCC;
+}
+#cssmenu1 ul ul li.odd {
+  background: #f4f4f4;
+}
+#cssmenu1 ul ul li.even {
+  background: #fff;
+}

@@ -1,0 +1,192 @@
+#-------------------------------------------------------------------------------
+# Copyright: 2018 digiBlitz Foundation
+# 
+# License: digiBlitz Public License 1.0 (DPL) 
+# Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+# 
+# Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+# 
+# Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+# 
+# "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+#owl {
+	overflow: hidden;
+	z-index: 1;
+	padding-top: 20px;
+	position: relative;
+	margin: 0 -10px;
+	padding-bottom: 50px;
+}
+
+
+
+#owl .owl-item {
+	float: left;
+	width: 100%;
+}
+
+#owl .item {
+	padding: 0 10px;
+	position: relative;
+	text-align: left;
+}
+
+
+
+#owl .item p {
+	margin-bottom: 6px;
+}
+
+#owl a.gal {
+	display: block;
+	position: relative;
+	margin-bottom: 22px;
+}
+
+#owl a.gal img {
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 0 0 #fff;
+	width: 100%;
+}
+
+#owl a.gal span {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border: 0 solid #b70000;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+
+#owl a.gal:hover span {
+	border-width: 18px;
+}
+
+.owl-wrapper-outer {
+	overflow: hidden;
+}
+
+
+#owl .owl-prev, #owl .owl-next {
+	cursor: pointer;
+	position: absolute;
+	background: url(../images/prevnext.png) 0 0 no-repeat;
+	display: block;
+	height: 37px;
+	right: 46px;
+	bottom: 0;
+	width: 36px;
+	overflow: hidden;
+	text-indent: -999px;
+
+}
+
+#owl .owl-next {
+	right: 10px;
+	background-position: right bottom;
+
+}
+#owl .owl-next:hover {
+	background-position: right 0;
+}
+
+
+
+#owl .owl-prev:hover {
+	background-position: 0 bottom;
+}
+
+
+
+
+
+/* Owl content */
+
+
+
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-webkit-perspective: 1000;
+}
+
+
+/*2nd*/
+#owl1 {
+	overflow: hidden;
+	z-index: 1;
+	margin-top: -70px;
+	position: relative;
+
+}
+
+
+#owl1 .owl-item {
+	float: left;
+	width: 100%;
+}
+
+
+#owl1  .item {
+	overflow: hidden;
+}
+
+#owl1 .alright span{
+	display: block;
+	margin-bottom: 3px;
+	padding-top: 18px;
+	font: 23px/18px 'Pacifico', cursive;
+}
+
+#owl1 .fleft {
+	margin-top: 0;
+	position: relative;
+	top: -3px;
+}
+
+.owl-wrapper-outer {
+	overflow: hidden;
+	padding-top: 68px;
+}
+
+
+#owl1 .owl-prev, #owl1 .owl-next {
+	cursor: pointer;
+	position: absolute;
+	background: url(../images/prevnext.png) 0 0 no-repeat;
+	display: block;
+	height: 37px;
+	right: 36px;
+	top: 0;
+	width: 36px;
+	overflow: hidden;
+	text-indent: -999px;
+
+}
+
+#owl1 .owl-next {
+	right: 0px;
+	background-position: right bottom;
+
+}
+#owl1 .owl-next:hover {
+	background-position: right 0;
+}
+
+
+
+#owl1 .owl-prev:hover {
+	background-position: 0 bottom;
+}
+

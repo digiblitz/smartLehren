@@ -1,0 +1,106 @@
+#-------------------------------------------------------------------------------
+# Copyright: 2018 digiBlitz Foundation
+# 
+# License: digiBlitz Public License 1.0 (DPL) 
+# Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+# 
+# Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+# 
+# Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+# 
+# "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@charset "UTF-8";
+/* Base Styles */
+#cssmenuss,
+#cssmenuss ul,
+#cssmenuss li,
+#cssmenuss a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  position: relative;
+}
+#cssmenuss a {
+  line-height: 1.3;
+  padding: 6px 15px;
+}
+#cssmenuss {
+  width: 300px;
+}
+#cssmenuss > ul > li {
+  cursor: pointer;
+  background: #000;
+  border-bottom: 1px solid #4c4e53;
+}
+#cssmenuss > ul > li:last-child {
+  border-bottom: 1px solid #3e3d3c;
+}
+#cssmenuss > ul > li > a {
+  font-size: 13px;
+  display: block;
+  color: #ffffff;
+  text-shadow: 0 1px 1px #000;
+  background: #64676e;
+  background: -moz-linear-gradient(#64676e 0%, #4c4e53 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #64676e), color-stop(100%, #4c4e53));
+  background: -webkit-linear-gradient(#64676e 0%, #4c4e53 100%);
+  background: linear-gradient(#64676e 0%, #4c4e53 100%);
+  font-family:'Times New Roman', Times, serif;
+}
+#cssmenuss > ul > li > a:hover {
+  text-decoration: none;
+}
+#cssmenuss > ul > li.active {
+  border-bottom: none;
+}
+#cssmenuss > ul > li.active > a {
+  background: #97c700;
+  background: -moz-linear-gradient(#97c700 0%, #709400 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #97c700), color-stop(100%, #709400));
+  background: -webkit-linear-gradient(#97c700 0%, #709400 100%);
+  background: linear-gradient(#97c700 0%, #709400 100%);
+  color: #4e5800;
+  text-shadow: 0 1px 1px #709400;
+}
+#cssmenuss > ul > li.has-sub > a:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 5px solid transparent;
+  border-left: 5px solid #ffffff;
+}
+#cssmenuss > ul > li.has-sub.active > a:after {
+  right: 14px;
+  top: 12px;
+  border: 5px solid transparent;
+  border-top: 5px solid #4e5800;
+}
+/* Sub menu */
+#cssmenuss ul ul {
+  padding: 0;
+  display: none;
+}
+#cssmenuss ul ul a {
+  background: #efefef;
+  display: block;
+  color: #797979;
+  font-size: 13px;
+}
+#cssmenuss ul ul li {
+  border-bottom: 1px solid #c9c9c9;
+}
+#cssmenuss ul ul li.odd a {
+  background: #e5e5e5;
+}
+#cssmenuss ul ul li:last-child {
+  border: none;
+}

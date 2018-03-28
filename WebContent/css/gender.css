@@ -1,0 +1,92 @@
+#-------------------------------------------------------------------------------
+# Copyright: 2018 digiBlitz Foundation
+# 
+# License: digiBlitz Public License 1.0 (DPL) 
+# Administered by digiBlitz Foundation. www.digiblitz.org/dpl/
+# 
+# Inventor: Suresh Kannan (Maya Suresh Kannan Balabisegan ) (www.sureshkannan.org)
+# 
+# Authors: Suresh Kannan (Maya Suresh Kannan Balabisegan )& digiBlitz.
+# 
+# "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software in accordance to the rules & restrictions of the digiBlitz Public License."
+#-------------------------------------------------------------------------------
+@CHARSET "ISO-8859-1";
+
+em{
+	color:red;
+}
+
+.file{
+	border-width:150px;
+}
+	
+input.error, select.error { 
+	border: 1px solid red; 
+}
+
+#form label{
+	font-family:"Times New Roman", Times, serif;
+	display: inline-block;
+	font-size:15px;
+	text-align: left;
+}
+
+#form .label {
+  padding-top: 2px;
+  padding-right: 0px;
+  vertical-align: top;
+  text-align: right;
+  width: 125px;
+  white-space: nowrap;
+}
+
+
+#form .status {
+  padding-top: 2px;
+  padding-left: 0px;   
+  white-space: nowrap;
+}
+
+
+#form label.error {
+  padding-left: 0px; 
+  color: red;
+}
+
+
+
+.linksss input {
+    z-index: 50;
+    position: relative;
+    letter-spacing: 2px;
+    display: inline-block;
+   font: 16px/18px 'trebuchet MS', verdana;
+    text-transform: uppercase;
+    color: #fff;
+    background-color:#779f59 ;
+    padding: 8px 20px 11px 24px;
+}
+
+.linkssss input {
+    z-index: 50;
+    position: relative;
+    letter-spacing: 2px;
+    display: inline-block;
+   font: 16px/18px 'trebuchet MS', verdana;
+    text-transform: uppercase;
+    color: #fff;
+    background-color:#b70000 ;
+    padding: 8px 20px 11px 24px;
+}
+
+
+.linksss input:hover {
+    background-color: #158D8E;
+	
+}
+.linkssss input:hover {
+    background-color: #158D8E;
+	
+}
+
+

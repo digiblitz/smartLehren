@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd"> -->
+	
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ 
+ 
+  <!-- <bean name="/login.html" class="com.spring.Loginaction"/>
+  <bean name="/trainer.html" class="com.spring.Traineraction"/>
+  <bean name="/student.html" class="com.spring.Studentaction"/>
+  <bean name="/map.html" class="com.spring.MappingAction"/>
+  <bean name="/qual.html" class="com.spring.QualificationAction"/>
+  <bean name="/SysMgmt.html" class="com.hpsystinet.action.KlgHpSystinetAction"/>
+  <bean name="/artifactMapping.html" class="com.artifact.action.KlgArtifactAction"/>
+   <bean name="/paypal.html" class="com.paypal.action.PayPalAction"/>
+   <bean name="/customer.html" class="com.spring.CustomerAction"/>
+   <bean name="/report.html" class="com.spring.ReportAction"/>
+  <bean name="/exam.html" class="com.exam.examAction"/>
+  <bean name="/enroll.html" class="com.spring.EnrollmentAction"/>
+  
+  <bean name="/reportList.html" class="com.report.action.GldkftReportList"/>
+  <bean name="/createSalesGraph.html" class="com.report.action.GldkftcreateSalesGraph"/>
+  <bean name="/MakeChart.html" class="com.report.action.AccTransAction"/>
+  <bean name="/areaGraph.html" class="com.report.action.GldkftareaGraph"/> -->
+   <!-- <bean name="/endPointPublisher.html" class="com.ContactUs.EndPointPublisher"/>-->
+ 
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+      <property name="prefix" value="/jsp/"/>
+      <property name="suffix" value=".jsp"/>
+  </bean>
+  
+  <context:component-scan base-package="com.artifact.action" />
+  <context:component-scan base-package="com.birt" />
+  <context:component-scan base-package="com.db" />
+  <context:component-scan base-package="com.email" />
+  <context:component-scan base-package="com.exam" />
+  <context:component-scan base-package="com.hpsystinet.action" />
+  <context:component-scan base-package="com.paypal.action" />
+  <context:component-scan base-package="com.report.action" />
+  <context:component-scan base-package="com.semika.cometd" />
+  <context:component-scan base-package="com.spring" />
+  <context:component-scan base-package="com.util" />
+  <context:component-scan base-package="com.digital.certification" />
+  <context:component-scan base-package="com.chat.action" />
+  <context:component-scan base-package="com.webservicepublisher" />
+  
+ <!--  <mvc:annotation-driven/>
+  <mvc:interceptors>
+    <bean id="webContentInterceptor" 
+          class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+        <property name="cacheSeconds" value="0"/>
+        <property name="useExpiresHeader" value="true"/>
+        <property name="useCacheControlHeader" value="true"/>
+        <property name="useCacheControlNoStore" value="true"/>
+    </bean>
+</mvc:interceptors> -->
+  
+</beans>
+
